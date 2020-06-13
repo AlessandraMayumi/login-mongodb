@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 router.post('/', async(req, res) => {
     try {
         let user = new User({
-            name: req.body.name,
+            username: req.body.username,
             email:req.body.email,
             password: req.body.password
         })
@@ -18,7 +18,6 @@ router.post('/', async(req, res) => {
     } catch (error) {
         res.redirect('/')
     }
-    
 })
 
 module.exports = router
